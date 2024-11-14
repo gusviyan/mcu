@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form Title</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add additional styles if needed */
+    body {
+      padding: 20px;
+    }
+
+    /* Adjust the form width for larger screens */
+    @media (min-width: 768px) {
+      .form-horizontal {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form class="form-horizontal" method="post">
+    <fieldset>
+
+
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="keluhan">Keluhan</label>
+        <div class="col-md-8">
+          <textarea id="keluhan" name="keluhan" placeholder="" class="form-control" required="" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="riwayatdahulu">Riwayat Penyakit Dahulu</label>
+        <div class="col-md-8">
+          <input id="riwayatdahulu" name="riwayatdahulu" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="riwayatkeluarga">Riwayat Penyakit Keluarga</label>
+        <div class="col-md-8">
+          <textarea id="riwayatkeluarga" name="riwayatkeluarga" class="form-control" required=""></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="merokok">Merokok</label>
+        <div class="col-md-8">
+          <select id="merokok" name="merokok" class="form-control" required="">
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="alkohol">Alkohol</label>
+        <div class="col-md-8">
+          <select id="alkohol" name="alkohol" class="form-control" required="">
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="obat">Obat - obatan</label>
+        <div class="col-md-8">
+          <select id="obat" name="obat" class="form-control" required="">
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="olahraga">Olahraga</label>
+        <div class="col-md-8">
+          <select id="olahraga" name="olahraga" class="form-control" required="">
+            <option value="jarang">Jarang</option>
+            <option value="sering">Sering</option>
+            <option value="rutin">Rutin</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="jenis_olahraga">Jenis Olahraga</label>
+        <div class="col-md-8">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="gym" name="jenis_olahraga" value="gym" required>
+            <label class="form-check-label" for="gym">GYM</label>
+          </div><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="futsal" name="jenis_olahraga" value="futsal" required>
+            <label class="form-check-label" for="futsal">Futsal</label>
+          </div><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="bulutangkis" name="jenis_olahraga" value="bulutangkis"
+              required>
+            <label class="form-check-label" for="bulutangkis">Bulu Tangkis</label>
+          </div><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="other" name="jenis_olahraga" value="other" required>
+            <label class="form-check-label" for="other">Lainnya</label>
+          </div>
+          <input id="other_text" name="other_text" type="text" placeholder="Tulis jenis olahraga lain"
+            class="form-control mt-2" style="display: none;">
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var otherRadio = document.getElementById('other');
+          var otherText = document.getElementById('other_text');
+
+          otherRadio.addEventListener('change', function () {
+            if (otherRadio.checked) {
+              otherText.style.display = 'block';
+              otherText.required = true;
+            }
+          });
+
+          var radios = document.getElementsByName('jenis_olahraga');
+          radios.forEach(function (radio) {
+            if (radio !== otherRadio) {
+              radio.addEventListener('change', function () {
+                if (radio.checked) {
+                  otherText.style.display = 'none';
+                  otherText.required = false;
+                  otherText.value = '';
+                }
+              });
+            }
+          });
+        });
+      </script>
+
+
+
+
+
+
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="alergi">Alergi</label>
+        <div class="col-md-8">
+          <textarea id="alergi" name="alergi" class="form-control" required=""></textarea>
+        </div>
+      </div>
+
+
+
+</body>
+
+</html>

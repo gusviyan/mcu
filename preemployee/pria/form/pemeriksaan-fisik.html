@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form Title</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add additional styles if needed */
+    body {
+      padding: 20px;
+    }
+
+    /* Adjust the form width for larger screens */
+    @media (min-width: 768px) {
+      .form-horizontal {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form class="form-horizontal" method="post">
+    <fieldset>
+
+      <h5>Antropometri</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="berat_badan">Berat Badan</label>
+        <div class="col-md-8">
+          <input id="berat_badan" name="berat_badan" type="number" placeholder="kg" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="tinggi_badan">Tinggi Badan Badan</label>
+        <div class="col-md-8">
+          <input id="tinggi_badan" name="tinggi_badan" type="number" placeholder="cm" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="bmi">BMI</label>
+        <div class="col-md-8">
+          <input id="bmi" name="bmi" type="text" placeholder="Terisi dan Tersimpan Otomatis" class="form-control"
+            readonly>
+        </div>
+      </div>
+
+      <!-- Display BMI status -->
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="bmi_status">BMI Status</label>
+        <div class="col-md-8">
+          <input id="bmi_status" name="bmi_status" type="text" placeholder="Terisi dan Tersimpan Otomatis"
+            class="form-control" readonly>
+        </div>
+      </div>
+
+      <h5>Tanda-tanda vital</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="berat_badan">Tensi(mmHg)</label>
+        <div class="col-md-8">
+          <input id="tensi" name="tensi" type="text" placeholder="aa/bb" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="nadi">Nadi</label>
+        <div class="col-md-8">
+          <input id="nadi" name="nadi" type="number" placeholder="x/menit" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="respirasi">Respirasi</label>
+        <div class="col-md-8">
+          <input id="respirasi" name="respirasi" type="number" placeholder="x/menit" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="suhu">Suhu</label>
+        <div class="col-md-8">
+          <input id="suhu" name="suhu" type="number" placeholder="C" class="form-control" required="">
+        </div>
+      </div>
+      <br>
+      <h5>Mata</h5>
+      <div>
+
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="butawarna">Buta Warna</label>
+          <div class="col-md-8">
+            <select id="butawarna" name="butawarna" class="form-control" required="">
+              <option value="Ya">Ya</option>
+              <option value="Tidak">Tidak</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="konjunctiva">Konjunctiva</label>
+          <div class="col-md-8">
+            <input id="konjunctiva" name="konjunctiva" type="text" placeholder="" class="form-control" required="">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="sclera">Sclera</label>
+          <div class="col-md-8">
+            <select id="sclera" name="sclera" class="form-control" required="">
+              <option value="Ikterik">Ikterik</option>
+              <option value="Tidak_Ikterik">Tidak Ikterik</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="palpebra">Palpebra</label>
+          <div class="col-md-8">
+            <select id="palpebra" name="palpebra" class="form-control" required="">
+              <option value="Normal">Normal</option>
+              <option value="Tidak Normal">Tidak Normal</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="refleks_cahaya">Refleks Cahaya</label>
+          <div class="col-md-8">
+            <select id="refleks_cahaya" name="refleks_cahaya" class="form-control" required="">
+              <option value="+/+">+/+</option>
+              <option value="+/-">+/-</option>
+              <option value="-/+">-/+</option>
+              <option value="-/-">-/-</option>
+            </select>
+          </div>
+        </div>
+
+        <h6>Visus</h6>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="od">OD</label>
+          <div class="col-md-8">
+            <textarea id="od" name="od" class="form-control" required=""></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="os">OS</label>
+          <div class="col-md-8">
+            <textarea id="os" name="os" class="form-control" required=""></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="catatan">Catatan</label>
+          <div class="col-md-8">
+            <input id="catatan" name="catatan" type="text" placeholder="" class="form-control" required="">
+          </div>
+        </div>
+        <br>
+        <h5>Mulut</h5>
+        <div>
+
+          <div class="form-group row">
+            <label class="col-md-4 col-form-label" for="faring">Faring</label>
+            <div class="col-md-8">
+              <select id="faring" name="faring" class="form-control" required="">
+                <option value="hiperemis -">hiperemis (-)</option>
+                <option value="hiperemis +">hiperemis (+)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 col-form-label" for="tonsil">Tonsil</label>
+            <div class="col-md-8">
+              <select id="tonsil" name="tonsil" class="form-control" required="">
+                <option value="Ada Pembesaran">Ada Pembesaran</option>
+                <option value="Tidak Ada Pembesaran">Tidak Ada Pembesaran</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 col-form-label" for="gigi">Gigi</label>
+            <div class="col-md-8">
+              <select id="gigi" name="gigi" class="form-control" required="">
+                <option value="Terawat">Terawat</option>
+                <option value="Tidak Terawat">Tidak Terawat</option>
+              </select>
+            </div>
+          </div>
+
+          <br>
+
+
+          <h5>Leher</h5>
+          <div>
+
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label" for="kgb">Pembesaran KGB</label>
+              <div class="col-md-8">
+                <select id="kgb" name="kgb" class="form-control" required="">
+                  <option value="Ada Pembengkakan">Ada Pembengkakan</option>
+                  <option value="Tidak Ada Pembengkakan">Tidak Ada (normal)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label" for="tyroid">Pembesaran Tyroid</label>
+              <div class="col-md-8">
+                <select id="tyroid" name="tyroid" class="form-control" required="">
+                  <option value="Ada Pembengkakan">Ada Pembengkakan</option>
+                  <option value="Tidak Ada Pembengkakan">Tidak Ada (normal)</option>
+                </select>
+              </div>
+            </div>
+
+            <br>
+
+
+            <h5>Telinga</h5>
+            <div>
+
+              <div class="form-group row">
+                <label class="col-md-4 col-form-label" for="tympani">Membran Tympani</label>
+                <div class="col-md-8">
+                  <select id="tympani" name="tympani" class="form-control" required="">
+                    <option value="Intak (Normal)">Intak (Normal)</option>
+                    <option value="Tidak Normal">Tidak Normal</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-4 col-form-label" for="prope">Serumen Prope</label>
+                <div class="col-md-8">
+                  <select id="prope" name="prope" class="form-control" required="">
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada (normal)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-4 col-form-label" for="infeksi">Infeksi</label>
+                <div class="col-md-8">
+                  <select id="infeksi" name="infeksi" class="form-control" required="">
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada (Normal)">Tidak Ada (normal)</option>
+                  </select>
+                </div>
+              </div>
+    </fieldset>
+
+
+    <script>
+      // Function to calculate BMI and BMI status
+      function calculateBMI() {
+        var weight = document.getElementById('berat_badan').value;
+        var height = document.getElementById('tinggi_badan').value / 100; // Convert height to meters
+        var bmi = (weight / (height * height)).toFixed(2);
+        document.getElementById('bmi').value = bmi;
+
+        // Determine BMI status
+        var bmiStatus;
+        if (bmi < 18.5) {
+          bmiStatus = 'Underweight';
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+          bmiStatus = 'Normal';
+        } else {
+          bmiStatus = 'Overweight';
+        }
+
+        document.getElementById('bmi_status').value = bmiStatus;
+      }
+
+      // Add event listeners to trigger BMI calculation when values change
+      document.getElementById('berat_badan').addEventListener('input', calculateBMI);
+      document.getElementById('tinggi_badan').addEventListener('input', calculateBMI);
+    </script>
+
+
+
+</body>
+
+</html>
