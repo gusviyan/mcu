@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form Title</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add additional styles if needed */
+    body {
+      padding: 20px;
+    }
+
+    /* Adjust the form width for larger screens */
+    @media (min-width: 768px) {
+      .form-horizontal {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form class="form-horizontal" method="post">
+    <fieldset>
+
+
+      <h5>Darah Lengkap</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="hemoglobin">Hemoglobin</label>
+        <div class="col-md-8">
+          <input id="hemoglobin" name="hemoglobin" type="number" placeholder="g/dl" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="hematokrit">Hematokrit</label>
+        <div class="col-md-8">
+          <input id="hematokrit" name="hematokrit" type="number" placeholder="%" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="trombosit">Trombosit</label>
+        <div class="col-md-8">
+          <input id="trombosit" name="trombosit" type="number" placeholder="µL" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="leukosit">Leukosit</label>
+        <div class="col-md-8">
+          <input id="leukosit" name="leukosit" type="number" placeholder="µL" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="led">LED</label>
+        <div class="col-md-8">
+          <input id="led" name="led" type="number" placeholder="mm/jam" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="eritrosit">Eritrosit</label>
+        <div class="col-md-8">
+          <input id="eritrosit" name="eritrosit" type="number" placeholder="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="hitung-jenis">Hitung Jenis</label>
+        <div class="col-md-8">
+          <input id="hitung-jenis" name="hitung-jenis" type="number" placeholder="µL" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="MCV">MCV</label>
+        <div class="col-md-8">
+          <input id="MCV" name="MCV" type="number" placeholder="fl" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="MCH">MCH</label>
+        <div class="col-md-8">
+          <input id="MCH" name="MCH" type="number" placeholder="pg" class="form-control">
+        </div>
+      </div>
+      <h5>Fungsi Hati</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="sgot">SGOT</label>
+        <div class="col-md-8">
+          <input id="sgot" name="sgot" type="number" placeholder="U/L" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="sgpt">SGPT</label>
+        <div class="col-md-8">
+          <input id="sgpt" name="sgpt" type="number" placeholder="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="kolesterol">Kolesterol Total</label>
+        <div class="col-md-8">
+          <input id="kolesterol" name="kolesterol" type="number" placeholder="mg/dl" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="hdl">Kolesterol HDL</label>
+        <div class="col-md-8">
+          <input id="hdl" name="hdl" type="number" placeholder="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="ldl">Kolesterol LDL</label>
+        <div class="col-md-8">
+          <input id="ldl" name="ldl" type="number" placeholder="mg/dl" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="tg">Trigliserida</label>
+        <div class="col-md-8">
+          <input id="tg" name="tg" type="number" placeholder="mg/dl" class="form-control">
+        </div>
+      </div>
+      <h5>Fungsi Ginjal</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="asam-urat">Asam Urat</label>
+        <div class="col-md-8">
+          <input id="asam-urat" name="asam-urat" type="number" placeholder="mg/dl" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="ureum">Ureum</label>
+        <div class="col-md-8">
+          <input id="ureum" name="ureum" type="number" placeholder="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="creatin">Creatin</label>
+        <div class="col-md-8">
+          <input id="creatin" name="creatin" type="number" placeholder="" class="form-control">
+        </div>
+      </div>
+      <h5>Gula Darah</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="glucosa-puasa">Glucosa Puasa</label>
+        <div class="col-md-8">
+          <input id="glucosa-puasa" name="glucosa-puasa" type="number" placeholder="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="glucosa-pp">Glucosa 2 Jam PP</label>
+        <div class="col-md-8">
+          <input id="glucosa-pp" name="glucosa-pp" type="number" placeholder="" class="form-control">
+        </div>
+      </div>
+      <h5>Imunoserologi Hepatitis</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="hbsag">HBsAg</label>
+        <div class="col-md-8">
+          <input id="hbsag" name="hbsag" type="text" placeholder="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="urinalisa">
+          <h5>Urinalisa</h5>
+        </label>
+        <div class="col-md-8">
+          <input id="urinalisa" name="urinalisa" type="number" placeholder="pH" class="form-control">
+        </div>
+      </div>
+
+    </fieldset>
+
+
+
+
+</body>
+
+</html>

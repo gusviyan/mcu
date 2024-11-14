@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form Title</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add additional styles if needed */
+    body {
+      padding: 20px;
+    }
+
+    /* Adjust the form width for larger screens */
+    @media (min-width: 768px) {
+      .form-horizontal {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form class="form-horizontal" method="post">
+    <fieldset>
+
+      <h5>Antropometri</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="berat_badan">Berat Badan(kg)</label>
+        <div class="col-md-8">
+          <input id="berat_badan" name="berat_badan" type="number" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="tinggi_badan">Tinggi Badan Badan (cm)</label>
+        <div class="col-md-8">
+          <input id="tinggi_badan" name="tinggi_badan" type="number" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="bmi">BMI</label>
+        <div class="col-md-8">
+          <input id="bmi" name="bmi" type="text" placeholder="Terisi dan Tersimpan Otomatis" class="form-control"
+            readonly>
+        </div>
+      </div>
+
+      <!-- Display BMI status -->
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="bmi_status">BMI Status</label>
+        <div class="col-md-8">
+          <input id="bmi_status" name="bmi_status" type="text" placeholder="Terisi dan Tersimpan Otomatis"
+            class="form-control" readonly>
+        </div>
+      </div>
+
+      <h5>Tanda-tanda vital</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="berat_badan">Tensi(mmHg)</label>
+        <div class="col-md-8">
+          <input id="tensi" name="tensi" type="text" placeholder="aa/bb" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="nadi">Nadi</label>
+        <div class="col-md-8">
+          <input id="nadi" name="nadi" type="number" placeholder="x/menit" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="respirasi">Respirasi</label>
+        <div class="col-md-8">
+          <input id="respirasi" name="respirasi" type="number" placeholder="x/menit" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="suhu">Suhu(C)</label>
+        <div class="col-md-8">
+          <input id="suhu" name="suhu" type="number" placeholder="celcius" class="form-control" required="">
+        </div>
+      </div>
+      <br>
+      <div>
+
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="keluhan">Hasil Konsul</label>
+          <div class="col-md-8">
+            <textarea id="hasil-konsul" name="hasil-konsul" placeholder="" class="form-control" required=""
+              rows="4"></textarea>
+          </div>
+        </div>
+        <br>
+        <div>
+    </fieldset>
+
+
+    <script>
+      // Function to calculate BMI and BMI status
+      function calculateBMI() {
+        var weight = document.getElementById('berat_badan').value;
+        var height = document.getElementById('tinggi_badan').value / 100; // Convert height to meters
+        var bmi = (weight / (height * height)).toFixed(2);
+        document.getElementById('bmi').value = bmi;
+
+        // Determine BMI status
+        var bmiStatus;
+        if (bmi < 18.5) {
+          bmiStatus = 'Underweight';
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+          bmiStatus = 'Normal';
+        } else {
+          bmiStatus = 'Overweight';
+        }
+
+        document.getElementById('bmi_status').value = bmiStatus;
+      }
+
+      // Add event listeners to trigger BMI calculation when values change
+      document.getElementById('berat_badan').addEventListener('input', calculateBMI);
+      document.getElementById('tinggi_badan').addEventListener('input', calculateBMI);
+    </script>
+
+
+
+</body>
+
+</html>
