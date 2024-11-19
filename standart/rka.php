@@ -6,7 +6,7 @@ include('koneksi.php');
 $rm = isset($_GET['rm']) ? $_GET['rm'] : '';
 
 // Fetch patient data based on RM
-$sql = "SELECT * FROM basic WHERE rm='$rm'";
+$sql = "SELECT * FROM standart WHERE rm='$rm'";
 $result = $conn->query($sql);
 $patient = $result->fetch_assoc();
 

@@ -104,46 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $anjuran = nl2br($_POST['anjuran']);
 
 
-    $sql = "UPDATE basic 
+    $sql = "UPDATE standart 
         SET 
-            -- hematokrit = '$hematokrit', 
-            -- trombosit = '$trombosit', 
-            -- leukosit = '$leukosit', 
-            -- led = '$led', 
-            -- eritrosit = '$eritrosit', 
-            -- mcv = '$mcv', 
-            -- mch = '$mch', 
-            -- mchc = '$mchc', 
-            -- rdw = '$rdw', 
-            -- basofil = '$basofil', 
-            -- eosinofil = '$eosinofil', 
-            -- neutrofil = '$neutrofil', 
-            -- limfosit = '$limfosit', 
-            -- monosit = '$monosit', 
-            -- sgot = '$sgot', 
-            -- sgpt = '$sgpt', 
-            -- kolesterol = '$kolesterol', 
-            -- hdl = '$hdl', 
-            -- ldl = '$ldl', 
-            -- tg = '$tg', 
-            -- asam_urat = '$asam_urat', 
-            -- ureum = '$ureum', 
-            -- creatin = '$creatin', 
-            -- glucosa_puasa = '$glucosa_puasa', 
-            -- glucosa_pp = '$glucosa_pp', 
-            -- hbsag = '$hbsag', 
-            -- warna = '$warna', 
-            -- kejernihan = '$kejernihan', 
-            -- beratjenis = '$beratjenis', 
-            -- ph = '$ph', 
-            -- proteinurin = '$proteinurin', 
-            -- glucosaurin = '$glucosaurin', 
-            -- keton = '$keton', 
-            -- bilirubin = '$bilirubin', 
-            -- urobilinogen = '$urobilinogen', 
-            -- darahurin = '$darahurin', 
-            -- leukositurin = '$leukositurin', 
-            -- nitrit = '$nitrit'
+
             thorax = '$thorax',
             kesan = '$kesan',
             anjuran = '$anjuran'

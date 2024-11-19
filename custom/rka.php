@@ -6,7 +6,7 @@ include('koneksi.php');
 $rm = isset($_GET['rm']) ? $_GET['rm'] : '';
 
 // Fetch patient data based on RM
-$sql = "SELECT * FROM basic WHERE rm='$rm'";
+$sql = "SELECT * FROM custom WHERE rm='$rm'";
 $result = $conn->query($sql);
 $patient = $result->fetch_assoc();
 
@@ -126,10 +126,10 @@ if ($patient) {
     <div class="card">
       <div class="card-header">
         <img src="../logo.png" alt="Logo">
-        Input Hasil Lab
+        Input Hasil Radiologi dan Kesimpulan
       </div>
       <div class="card-body">
-        <form class="form-horizontal" method="post" action="simpan-lab.php" id="mainForm">
+        <form class="form-horizontal" method="post" action="simpan-rka.php" id="mainForm">
         <input type="hidden" name="rm" value="<?php echo $rm; ?>">
           <div class="form-section">
             <!-- Display RM and Patient Name -->

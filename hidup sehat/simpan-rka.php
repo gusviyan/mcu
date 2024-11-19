@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $anjuran = nl2br($_POST['anjuran']);
 
 
-    $sql = "UPDATE basic 
+    $sql = "UPDATE hidup_sehat
         SET 
             -- hematokrit = '$hematokrit', 
             -- trombosit = '$trombosit', 
