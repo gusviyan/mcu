@@ -1,0 +1,68 @@
+/* Add some margin and padding to the form */
+.form-horizontal {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the legend */
+  legend {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  /* Style for section headers (h3) */
+  h3 {
+    margin-top: 15px;
+  }
+  
+  /* Style for form labels */
+  .form-group label {
+    margin-top: 8px;
+    font-weight: bold;
+  }
+  
+  /* Style for form inputs */
+  .form-control {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for checkboxes */
+  .checkbox {
+    margin-top: 5px;
+  }
+  
+  /* Style for select inputs */
+  select {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for form buttons (if any) */
+  /* Add your own styles if needed */
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .form-horizontal {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    /* Increase font size for better readability on smaller screens */
+    legend, h3, .form-group label {
+      font-size: 1em;
+    }
+  
+    /* Adjust padding and font size for smaller screens */
+    .form-control, select {
+      padding: 6px;
+      font-size: 0.9em;
+    }
+  }
+  

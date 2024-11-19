@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form Title</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add additional styles if needed */
+    body {
+      padding: 20px;
+    }
+
+    /* Adjust the form width for larger screens */
+    @media (min-width: 768px) {
+      .form-horizontal {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form class="form-horizontal" method="post">
+    <fieldset>
+
+      <legend> </legend>
+
+      <h5>Jantung</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="jantung-perkusi">Perkusi</label>
+        <div class="col-md-8">
+          <input id="jantung-perkusi" name="perkusi" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="jantung-auskultasi">Auskultasi Jantung</label>
+        <div class="col-md-8">
+          <textarea id="jantung-auskultasi" name="jantung-auskultasi" placeholder="" class="form-control" required=""
+            rows="4"></textarea>
+        </div>
+      </div>
+
+
+      <h5>Pulmo</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="pulmo-perkusi">Perkusi</label>
+        <div class="col-md-8">
+          <input id="pulmo-perkusi" name="pulmo-perkusi" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="pulmo-auskultasi">Auskultasi</label>
+        <div class="col-md-8">
+          <textarea id="pulmo-auskultasi" name="pulmo-auskultasi" class="form-control" required=""></textarea>
+        </div>
+      </div>
+
+      <h5>Abdomen</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="inspeksi">Inspeksi</label>
+        <div class="col-md-8">
+          <input id="inspeksi" name="inspeksi" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="palpalsi">Palpalsi</label>
+        <div class="col-md-8">
+          <textarea id="palpalsi" name="palpalsi" class="form-control" required=""></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="auskultasi">Auskultasi</label>
+        <div class="col-md-8">
+          <textarea id="auskultasi" name="auskultasi" class="form-control" required=""></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="ginjal">Ginjal</label>
+        <div class="col-md-8">
+          <input id="ginjal" name="ginjal" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="ekstremitas-atas">
+          <h5>Ekstremitas Atas</h5>
+        </label>
+        <div class="col-md-8">
+          <textarea id="ektremitas-atas" name="ekstremitas-atas" class="form-control" required=""></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="ekstremitas-bawah">
+          <h5>Ekstremitas Bawah</h5>
+        </label>
+        <div class="col-md-8">
+          <textarea id="ektremitas-bawah" name="ekstremitas-bawah" class="form-control" required=""></textarea>
+        </div>
+      </div>
+
+      <h5>Kulit</h5>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="tumor">Tumor</label>
+        <div class="col-md-8">
+          <input id="tumor" name="tumor" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="kelainan-kulit">Kelainan Kulit</label>
+        <div class="col-md-8">
+          <input id="kelainan-kulit" name="kelainan-kulit" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+
+    </fieldset>
+
+
+
+</body>
+
+</html>

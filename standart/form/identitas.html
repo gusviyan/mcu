@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form Title</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add additional styles if needed */
+    body {
+      padding: 20px;
+    }
+
+    /* Adjust the form width for larger screens */
+    @media (min-width: 768px) {
+      .form-horizontal {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form class="form-horizontal" method="POST">
+    <fieldset>
+
+
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="nama">Nama </label>
+        <div class="col-md-8">
+          <input id="nama" name="nama" type="text" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="rm">No RM </label>
+        <div class="col-md-8">
+          <input id="rm" name="rm" type="text" placeholder="xx-xx-xx" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="tgl_lahir">Tanggal Lahir</label>
+        <div class="col-md-8">
+          <input id="tgl_lahir" name="tgl_lahir" type="date" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="jenis_kelamin">Jenis Kelamin</label>
+        <div class="col-md-8">
+          <select id="jenis_kelamin" name="jenis_kelamin" class="form-control" required="">
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="tanggal">Tanggal Pemeriksaan</label>
+        <div class="col-md-8">
+          <input id="tanggal" name="tanggal" type="date" placeholder="" class="form-control" required="">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="penjamin">Penjamin</label>
+        <div class="col-md-8">
+          <select id="penjamin" name="penjamin" class="form-control" required="">
+            <option value="Pribadi">Pribadi</option>
+            <option value="asuransi">Asuransi</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="asuransi">Jenis Asuransi</label>
+        <div class="col-md-8">
+          <input id="asuransi" name="asuransi" type="text" placeholder="" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="paket">Paket</label>
+        <div class="col-md-8">
+          <input id="paket" name="paket" type="text" placeholder="Standart" value="Standart" class="form-control"
+            readonly>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 col-form-label" for="usia">Usia</label>
+        <div class="col-md-8">
+          <input id="usia" name="usia" type="text" placeholder="xx tahun yy bulan" class="form-control" required=""
+            readonly>
+        </div>
+      </div>
+
+      <!-- Hidden inputs to store usia_tahun and usia_bulan -->
+      <input type="hidden" id="usia_tahun" name="usia_tahun">
+      <input type="hidden" id="usia_bulan" name="usia_bulan">
+
+    </fieldset>
+
+    <script>
+      document.getElementById('tgl_lahir').addEventListener('change', function () {
+        var birthDate = new Date(this.value);
+        var today = new Date();
+        var ageYears = today.getFullYear() - birthDate.getFullYear();
+        var ageMonths = today.getMonth() - birthDate.getMonth();
+
+        if (ageMonths < 0 || (ageMonths === 0 && today.getDate() < birthDate.getDate())) {
+          ageYears--;
+          ageMonths += 12;
+        }
+
+        if (today.getDate() < birthDate.getDate()) {
+          ageMonths--;
+          if (ageMonths < 0) {
+            ageMonths = 11;
+            ageYears--;
+          }
+        }
+
+        document.getElementById('usia').value = ageYears + " tahun " + ageMonths + " bulan";
+        document.getElementById('usia_tahun').value = ageYears;
+        document.getElementById('usia_bulan').value = ageMonths;
+      });
+    </script>
+
+</body>
+
+</html>
