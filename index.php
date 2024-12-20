@@ -30,11 +30,11 @@ function getTableCount($conn, $table)
 // Get counts for each table
 $basicCount = getTableCount($conn, 'basic');
 $standartCount = getTableCount($conn, 'standart');
-$preemployeePriaCount = getTableCount($conn, 'preemployee_pria');
-$preemployeeWanitaCount = getTableCount($conn, 'preemployee_wanita');
+$preemployeePriaCount = getTableCount($conn, 'preemploye_pria');
+$preemployeeWanitaCount = getTableCount($conn, 'preemploye_wanita');
 $umrohCount = getTableCount($conn, 'umroh');
 $hidupSehatCount = getTableCount($conn, 'hidup_sehat');
-$calonKaryawanCount = getTableCount($conn, 'calon_karyawan');
+$calonKaryawanCount = getTableCount($conn, 'calonkaryawan');
 $kartapCount = getTableCount($conn, 'kartap');
 $tambahanCount = getTableCount($conn, 'tambahan');
 $customCount = getTableCount($conn, 'custom');
